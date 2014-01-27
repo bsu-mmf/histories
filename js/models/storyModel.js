@@ -8,7 +8,7 @@
         },
         
         url: function() {
-            return '/stories/story_' + this.attributes.storyNumber + '.json';
+            return 'stories/story_' + this.attributes.storyNumber + '.json';
         }
         
     });
