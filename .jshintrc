@@ -1,0 +1,28 @@
+{
+    "browser": true,
+    "globals": {
+        "_": true,
+        "$": true,
+        "Backbone": true,
+        "Router": true,
+        "Views": true,
+        "Models": true
+    },
+    "esnext": true,
+    "bitwise": false,
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "immed": true,
+    "indent": 4,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "quotmark": "single",
+    "regexp": true,
+    "undef": true,
+    "unused": true,
+    "strict": true,
+    "trailing": true,
+    "smarttabs": true
+}
