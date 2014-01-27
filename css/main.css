@@ -1,0 +1,52 @@
+.container {
+    max-width: 1190px;
+    padding: 0 15px;
+    margin: 0 auto;
+    font-family: monospace;
+}
+
+a, a:visited, a:active {
+    color: #2578d9;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+a:hover {
+    background: #2578d9;
+    color: #fff;
+}
+
+body > * {
+    width: 100%;
+}
+body > header {
+    position: fixed;
+    top: 0;
+}
+body > header h1 {
+    font-size: 21px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav {
+    margin-top: 30px;
+}
+nav ul li {
+    display: block;
+    float: left;
+    width: 50%;
+}
+nav ul li {
+    margin: 0 auto;
+}
+
+
+body > footer {
+    position: fixed;
+    bottom: 10px;
+}
+body > footer a {
+    font-size: 12px;
+}
