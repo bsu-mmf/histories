@@ -6,7 +6,8 @@
         "Backbone": true,
         "Router": true,
         "Views": true,
-        "Models": true
+        "Models": true,
+        "Settings": true
     },
     "esnext": true,
     "bitwise": false,
