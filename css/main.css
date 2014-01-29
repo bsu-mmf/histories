@@ -1,11 +1,12 @@
 .container {
     max-width: 890px;
+    box-sizing: border-box;
     padding: 0 15px;
     margin: 0 auto;
     font-family: monospace;
 }
 
-a, a:visited, a:active {
+a, a:visited {
     color: #2578d9;
     font-size: 18px;
     padding: 10px;
@@ -55,10 +56,15 @@ nav ul li a {
 body > footer {
     position: fixed;
     bottom: 10px;
+    text-align: center;
 }
 body > footer a {
     font-size: 12px;
-    text-align: center;
+    display: inline-block;
+}
+
+ol {
+    padding-left: 30px;
 }
 
 .story {
@@ -84,4 +90,19 @@ body > footer a {
 .allStories a.current {
     background: #2578d9;
     color: #fff;
+}
+
+@media (max-width: 767px) {
+    a {
+        padding: 5px;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    .story {
+        text-align: left;
+    }
+    body > footer div:first-child {
+        margin-bottom: 10px;
+    }
 }

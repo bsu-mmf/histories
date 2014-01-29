@@ -16,8 +16,7 @@
         
         render: function() {
             var self = this;
-            $.get('templates/story.tpl', function(data) {
-                var tpl = _.template(data);
+            this.getTemplate('templates/story.tpl', function(tpl) {
                 $('#content').html(tpl(self.model.toJSON()));
             });
         }
