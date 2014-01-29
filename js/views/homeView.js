@@ -4,14 +4,14 @@
     root.Views = root.Views || {};
     Views.HomeView = Backbone.View.extend({
         initialize: function() {
+            _.bindAll(this, 'render');
             this.model = new Models.HomeModel();
             this.render();
         },
         
         render: function() {
             var self = this;
-            $.get('templates/home.tpl', function(data) {
-                var tpl = _.template(data);
+            this.getTemplate('templates/home.tpl', function(tpl) {
                 $('#content').html(tpl(self.model.toJSON()));
             });
         }
