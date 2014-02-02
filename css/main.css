@@ -33,8 +33,14 @@ body > header h1 {
     margin-top: 10px;
 }
 
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
 #content {
-    margin-top: 200px;
+    margin-top: 150px;
+    height: calc(100% - 225px);
+    overflow: auto;
 }
 
 nav {
@@ -43,7 +49,7 @@ nav {
 nav ul li {
     display: block;
     float: left;
-    width: 50%;
+    width: 33.3333%;
 }
 nav ul li {
     margin: 0 auto;
@@ -66,6 +72,10 @@ body > footer a {
 ol {
     padding-left: 30px;
 }
+sup {
+    vertical-align: super;
+    font-size: small;
+}
 
 .story {
     font-size: 17px;
@@ -77,6 +87,17 @@ ol {
 }
 .story p {
     margin-bottom: 10px;
+}
+.story .p {
+    margin-bottom: 20px;
+}
+.story p.verse {
+    text-indent: 0;
+    padding-left: 40px;
+}
+.story a {
+    display: inline;
+    padding: 0;
 }
 
 .allStories ul {
@@ -90,6 +111,24 @@ ol {
 .allStories a.current {
     background: #2578d9;
     color: #fff;
+}
+
+.math {
+    text-align: center;
+    text-indent: 0;
+}
+
+.footnote {
+    margin-top: 50px;
+    font-size: small;
+    text-indent: 0;
+}
+.footnote:before {
+    border-top: 1px solid black;
+    content: '';
+    width: 50%;
+    display: block;
+    padding-top: 10px;
 }
 
 @media (max-width: 767px) {
