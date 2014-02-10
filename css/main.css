@@ -81,6 +81,10 @@ sup {
     font-size: 17px;
     text-indent: 40px;
     text-align: justify;
+    height: calc(100% - 100px);
+    margin-bottom: 30px;
+    padding-right: 15px;
+    overflow: auto;
 }
 .story h1 {
     margin-bottom: 20px;
@@ -102,7 +106,6 @@ sup {
 
 .allStories ul {
     list-style: none;
-    margin-top: 100px;
     text-align: center;
 }
 .allStories ul li {

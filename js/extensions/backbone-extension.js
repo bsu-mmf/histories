@@ -1,4 +1,4 @@
-(function() {
+(function(Backbone) {
     'use strict';
     
     Backbone.View.prototype = _.extend(Backbone.View.prototype, {
@@ -21,4 +21,4 @@
         }
     });
     
-}(this));
+}(this.Backbone));

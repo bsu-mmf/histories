@@ -2,12 +2,7 @@
     "browser": true,
     "globals": {
         "_": true,
-        "$": true,
-        "Backbone": true,
-        "Router": true,
-        "Views": true,
-        "Models": true,
-        "Settings": true
+        "$": true
     },
     "esnext": true,
     "bitwise": false,

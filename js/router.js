@@ -1,4 +1,4 @@
-(function(root) {
+(function(root, Backbone, Views, Settings) {
     'use strict';
 
     root.Router = Backbone.Router.extend({
@@ -37,4 +37,4 @@
         $('body > header').find('#' + id).addClass('active');
     }
     
-}(this));
+}(this, this.Backbone, this.Views, this.Settings));

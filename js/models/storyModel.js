@@ -1,8 +1,8 @@
-(function(root) {
+(function(root, Backbone) {
     'use strict';
 
     root.Models = root.Models || {};
-    Models.StoryModel = Backbone.Model.extend({
+    root.Models.StoryModel = Backbone.Model.extend({
         defaults: {
             storyNumber: 0
         },
@@ -14,4 +14,4 @@
     });
 
 
-}(this));
+}(this, this.Backbone));
