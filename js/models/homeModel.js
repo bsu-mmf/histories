@@ -21,6 +21,7 @@
             this.attributes.stories[11] = 'Кандидат механических наук.';
             this.attributes.stories[12] = 'Алкогольная аппроксимация.';
             this.attributes.stories[13] = 'Почти как у Пифагора.';
+            this.attributes.stories[14] = 'Ад и неравномерные тепловые процессы.';
             this.attributes.stories[15] = 'Сложное имя.';
             this.attributes.stories[16] = 'Цыгане и функциональный анализ.';
             this.attributes.stories[17] = 'Вредный преподаватель.';
@@ -40,6 +41,10 @@
             this.attributes.stories[31] = 'Множитель ёпт.';
             this.attributes.stories[32] = 'Чей же это корень?';
             this.attributes.stories[33] = 'Эфимерные неизмеримые функции.';
+            this.attributes.stories[34] = 'Множество меры нуль.';
+            this.attributes.stories[35] = 'Нобелевские лауреаты по экономике.';
+            this.attributes.stories[36] = 'Странные иррациональные числа.';
+            this.attributes.stories[37] = 'Фурьёвые ряды.';
             
             /*
             this.attributes.stories[1001] = 'Шарообразная диссертация.';

@@ -3,7 +3,7 @@
     
     root.Settings = {
         Version: '0.0.0.1',
-        CountStories: 33
+        CountStories: 37
     };
     
 }(this));
