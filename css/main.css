@@ -150,6 +150,7 @@ section.info p {
     margin-bottom: 10px;
     font-size: 16px;
     text-indent: 40px;
+    text-align: justify;
 }
 section.info a {
     display: inline;
