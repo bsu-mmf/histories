@@ -1,8 +1,8 @@
-(function(root) {
+(function(root, Backbone, Models, MathJax) {
     'use strict';
     
     root.Views = root.Views || {};
-    Views.StoryView = Backbone.View.extend({
+    root.Views.StoryView = Backbone.View.extend({
         id: 'content',
         
         initialize: function(data) {
@@ -18,9 +18,10 @@
             var self = this;
             this.getTemplate('templates/story.tpl', function(tpl) {
                 $('#content').html(tpl(self.model.toJSON()));
+                MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
             });
         }
         
     });
 
-}(this));
+}(this, this.Backbone, this.Models, this.MathJax));

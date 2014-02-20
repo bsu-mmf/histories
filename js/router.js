@@ -1,4 +1,4 @@
-(function(root) {
+(function(root, Backbone, Views, Settings) {
     'use strict';
 
     root.Router = Backbone.Router.extend({
@@ -6,7 +6,8 @@
         routes: {
             '': 'home',
             'random': 'random',
-            'story/:storyNumber': 'story'
+            'story/:storyNumber': 'story',
+            'info': 'info'
         },
         
         home: function() {
@@ -24,6 +25,11 @@
             new Views.StoryView({
                 storyNumber: +storyNumber
             });
+        },
+        
+        info: function() {
+            activateHeader('info');
+            new Views.InfoView();
         }
         
     });
@@ -37,4 +43,4 @@
         $('body > header').find('#' + id).addClass('active');
     }
     
-}(this));
+}(this, this.Backbone, this.Views, this.Settings));

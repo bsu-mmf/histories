@@ -1,8 +1,8 @@
-(function(root) {
+(function(root, Backbone, Models) {
     'use strict';
 
     root.Views = root.Views || {};
-    Views.HomeView = Backbone.View.extend({
+    root.Views.HomeView = Backbone.View.extend({
         initialize: function() {
             _.bindAll(this, 'render');
             this.model = new Models.HomeModel();
@@ -18,4 +18,4 @@
         
     });
 
-}(this));
+}(this, this.Backbone, this.Models));

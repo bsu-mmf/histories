@@ -1,4 +1,4 @@
-(function() {
+(function(Backbone, Settings, Router) {
     'use strict';
     
     if (localStorage) {
@@ -16,4 +16,4 @@
         router.navigate($(event.target).data('href'), true);
     });
     
-}(this));
+}(this.Backbone, this.Settings, this.Router));

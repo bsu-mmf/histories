@@ -4,17 +4,18 @@
 <head>
     <title>Истории МехМата БГУ</title>
     <meta charset="utf-8">
-    
+
     <!--[if lt IE 9]>
-        <script src="js/vendor/html5shiv.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    
+
     <link rel="shortcut icon" href="img/sum.ico">
     <link rel="shortcut icon" href="img/sum.ico" type="image/x-icon">
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 
 <body>
@@ -29,6 +30,9 @@
                     <li>
                         <a id="randomStory" data-href="random" href="#">Случайная история</a>
                     </li>
+                    <li>
+                        <a id="info" data-href="info" href="#">Об этом сборнике</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -39,28 +43,35 @@
     <footer>
         <div class="container">
             <div>
-                Страница в ВКонтакте: <a target="_blank" href="http://vk.com/bsu_mmf_jokes" class="normal-link">vk.com/bsu_mmf_jokes</a>
+                Страница в ВКонтакте:
+                <a target="_blank" href="http://vk.com/bsu_mmf_jokes" class="normal-link">vk.com/bsu_mmf_jokes</a>
             </div>
             <div>
-                С отзывами, предложениями и найденными ошибками сюда: <a href="mailto:semigradskyd@gmail.com?subject=bsu-mmf-stories" class="normal-link">semigradskyd@gmail.com</a><a target="_blank" href="https://github.com/bsu-mmf/histories/issues" class="normal-link">GitHub</a>    
+                С отзывами, предложениями и найденными ошибками сюда:
+                <a href="mailto:semigradskyd@gmail.com?subject=bsu-mmf-stories" class="normal-link">semigradskyd@gmail.com</a>
+                <a target="_blank" href="https://github.com/bsu-mmf/histories/issues" class="normal-link">GitHub</a>
             </div>
         </div>
     </footer>
 
-    <script type="text/javascript" src="js/vendor/jquery-min.js"></script>
-    <script type="text/javascript" src="js/vendor/underscore-min.js"></script>
-    <script type="text/javascript" src="js/vendor/backbone-min.js"></script>
-    
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+
     <script type="text/javascript" src="js/extensions/backbone-extension.js"></script>
-    
+
     <script type="text/javascript" src="js/models/homeModel.js"></script>
-    <script type="text/javascript" src="js/views/homeView.js"></script>
     <script type="text/javascript" src="js/models/storyModel.js"></script>
-    <script type="text/javascript" src="js/views/storyView.js"></script>
     
+    <script type="text/javascript" src="js/views/homeView.js"></script>
+    <script type="text/javascript" src="js/views/storyView.js"></script>
+    <script type="text/javascript" src="js/views/infoView.js"></script>
+
     <script type="text/javascript" src="js/settings.js"></script>
     <script type="text/javascript" src="js/router.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </body>
 
 </html>
