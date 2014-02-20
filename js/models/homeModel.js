@@ -45,12 +45,9 @@
             this.attributes.stories[35] = 'Нобелевские лауреаты по экономике.';
             this.attributes.stories[36] = 'Странные иррациональные числа.';
             this.attributes.stories[37] = 'Фурьёвые ряды.';
-            
-            /*
-            this.attributes.stories[1001] = 'Шарообразная диссертация.';
-            this.attributes.stories[1002] = 'Кровавая жатва.';
-            this.attributes.stories[1003] = 'Но попытаться стоит.';
-            */
+            this.attributes.stories[38] = 'Шарообразная диссертация.';
+            this.attributes.stories[39] = 'Кровавая жатва.';
+            this.attributes.stories[40] = 'Но попытаться стоит.';
         }
         
     });

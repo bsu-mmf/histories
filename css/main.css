@@ -139,6 +139,23 @@ sup {
     margin-top: 50px;
 }
 
+section.info h1 {
+    font-size: 20px;
+    margin: 40px 0 20px;
+}
+section.info h1:first-child {
+    margin-top: 0;
+}
+section.info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-indent: 40px;
+}
+section.info a {
+    display: inline;
+    padding: 0;
+}
+
 @media (max-width: 767px) {
     a {
         padding: 5px;
