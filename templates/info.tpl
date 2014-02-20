@@ -1,7 +1,7 @@
 <section class="info">
     <h1>Что это такое?</h1>
     <p>
-        Онлайн сборник смешных, не очень смешных и совсем не смешных историй МехМата БГУ. Подавляющая часть их (99,99%) собрана <a href="http://vk.com/mikhail.prokhorovich" target="_blank" class="normal-link">М.А.&nbsp;Прохоровичем</a> (старший преподаватель МехМата БГУ), соответственно если история рассказывается от первого лица, то это он (если не указано иное). Идея сайта была высказана <a href="http://vk.com/semigradsky" target="_blank" class="normal-link">Д.Б.&nbsp;Семиградским</a> (студент МехМата БГУ) в <a href="http://vk.com/bsu_mmf_jokes" target="_blank" class="normal-link">группе "Истории МехМата БГУ" в ВКонтакте</a> и им же воплощена в жихнь.
+        Онлайн сборник смешных, не очень смешных и совсем не смешных историй МехМата БГУ. Подавляющая часть их (99,99%) собрана <a href="http://vk.com/mikhail.prokhorovich" target="_blank" class="normal-link">М.А.&nbsp;Прохоровичем</a> (кандидат физико математических наук, доцент кафедры теории функций мехмата бгу, старший преподаватель МехМата БГУ), соответственно если история рассказывается от первого лица, то это он (если не указано иное). Эти истории и многие другие <a href="https://drive.google.com/file/d/0BwUmPnTc9bQ1M3Q3SElEbHhBN1k/edit?usp=sharing" target="_blank" class="normal-link">собраны здесь</a>. Идея сайта была высказана <a href="http://vk.com/semigradsky" target="_blank" class="normal-link">Д.Б.&nbsp;Семиградским</a> (студент 1-го курса МехМата БГУ) в <a href="http://vk.com/bsu_mmf_jokes" target="_blank" class="normal-link">группе "Истории МехМата БГУ" в ВКонтакте</a> и им же воплощена в жихнь.
     </p>
     
     <h1>Когда будут новые истории?!</h1>
