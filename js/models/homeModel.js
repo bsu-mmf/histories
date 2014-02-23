@@ -48,6 +48,11 @@
             this.attributes.stories[38] = 'Шарообразная диссертация.';
             this.attributes.stories[39] = 'Кровавая жатва.';
             this.attributes.stories[40] = 'Но попытаться стоит.';
+            this.attributes.stories[41] = 'Звонил не математик.';
+            this.attributes.stories[42] = 'Внучка В.Г. Кротова.';
+            this.attributes.stories[43] = 'Как В.Г. Кротова из комсомола исключали.';
+            this.attributes.stories[44] = 'Чьих будешь?';
+            this.attributes.stories[45] = 'Сегодня я буду сверху!';
         }
         
     });
