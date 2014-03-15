@@ -53,6 +53,15 @@
             this.attributes.stories[43] = 'Как В.Г. Кротова из комсомола исключали.';
             this.attributes.stories[44] = 'Чьих будешь?';
             this.attributes.stories[45] = 'Сегодня я буду сверху!';
+            this.attributes.stories[46] = 'Эквидомоид.';
+            this.attributes.stories[47] = 'Можно ли причесать ежа?';
+            this.attributes.stories[48] = 'Если аспирант не защищается.';
+            this.attributes.stories[49] = 'Тема диссертации.';
+            this.attributes.stories[50] = 'Антиалкогольный плакат.';
+            this.attributes.stories[51] = 'Необходимые и достаточные условия.';
+            this.attributes.stories[52] = 'Действительный и&hellip; действующий.';
+            this.attributes.stories[53] = 'Три типа ученых.';
+            this.attributes.stories[54] = 'Мотивирующая пословица.';
         }
         
     });

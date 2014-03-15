@@ -19,6 +19,9 @@ a:hover {
 a.active {
     font-weight: bold;
 }
+:focus, a:focus {
+    outline: none;
+}
 
 body > * {
     width: 100%;
@@ -103,6 +106,16 @@ sup {
     display: inline;
     padding: 0;
 }
+.story .upper {
+    text-transform: uppercase;
+}
+.story .center {
+    text-align: center;
+}
+.story ol {
+    text-indent: 0;
+    padding-left: 75px;
+}
 
 .allStories ul {
     list-style: none;
@@ -121,12 +134,13 @@ sup {
     text-indent: 0;
 }
 
-.footnote {
+ol.footnote {
     margin-top: 50px;
     font-size: small;
     text-indent: 0;
+    padding-left: 30px;
 }
-.footnote:before {
+ol.footnote:before {
     border-top: 1px solid black;
     content: '';
     width: 50%;
