@@ -7,40 +7,37 @@
             '': 'home',
             'random': 'random',
             'story/:storyNumber': 'story',
-            'info': 'info'
+            'info': 'info',
+            'favorites': 'favorites',
+            'options': 'options'
         },
         
         home: function() {
-            activateHeader('allStories');
             new Views.HomeView();
         },
         
+        favorites: function() {
+        
+        },
+        
         random: function() {
-            activateHeader('randomStory');
             this.navigate('/story/' + Math.ceil(Math.random() * Settings.CountStories), true);
         },
         
         story: function(storyNumber) {
-            deactivatedHeader();
             new Views.StoryView({
                 storyNumber: +storyNumber
             });
         },
         
+        options: function() {
+        
+        },
+        
         info: function() {
-            activateHeader('info');
             new Views.InfoView();
         }
         
     });
-    
-    function deactivatedHeader() {
-        $('body > header a').removeClass('active');
-    }
-    
-    function activateHeader(id) {
-        deactivatedHeader();
-        $('body > header').find('#' + id).addClass('active');
-    }
     
 }(this, this.Backbone, this.Views, this.Settings));

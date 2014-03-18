@@ -10,6 +10,7 @@
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <link rel="shortcut icon" href="img/sum.ico">
     <link rel="shortcut icon" href="img/sum.ico" type="image/x-icon">
@@ -26,13 +27,19 @@
             <nav>
                 <ul>
                     <li>
-                        <a id="allStories" data-href="" href="#">Все истории</a>
+                        <a id="allStories" data-href="" href="#" class="icon-book"><span>Все истории</span></a>
                     </li>
                     <li>
-                        <a id="randomStory" data-href="random" href="#">Случайная история</a>
+                        <a id="favorites" data-href="favorites" href="#" class="icon-star"><span>Избранные</span></a>
                     </li>
                     <li>
-                        <a id="info" data-href="info" href="#">Об этом сборнике</a>
+                        <a id="randomStory" data-href="random" href="#" class="icon-dice"><span>Случайная</span></a>
+                    </li>
+                    <li>
+                        <a id="options" data-href="options" href="#" class="icon-cogs"><span>Настройки</span></a>
+                    </li>
+                    <li>
+                        <a id="info" data-href="info" href="#" class="icon-info"><span>О сборнике</span></a>
                     </li>
                 </ul>
             </nav>
@@ -43,15 +50,9 @@
     </div>
     <footer>
         <div class="container">
-            <div>
-                Страница в ВКонтакте:
-                <a target="_blank" href="http://vk.com/bsu_mmf_jokes" class="normal-link">vk.com/bsu_mmf_jokes</a>
-            </div>
-            <div>
-                С отзывами, предложениями и найденными ошибками сюда:
-                <a href="mailto:semigradskyd@gmail.com?subject=bsu-mmf-stories" class="normal-link">semigradskyd@gmail.com</a>
-                <a target="_blank" href="https://github.com/bsu-mmf/histories/issues" class="normal-link">GitHub</a>
-            </div>
+            <a target="_blank" href="http://vk.com/bsu_mmf_jokes" class="normal-link icon-vk"></a>
+            <a href="mailto:semigradskyd@gmail.com?subject=bsu-mmf-stories" class="normal-link icon-mail"></a>
+            <a target="_blank" href="https://github.com/bsu-mmf/histories/issues" class="normal-link icon-github"></a>
         </div>
     </footer>
 

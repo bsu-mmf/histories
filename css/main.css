@@ -11,6 +11,7 @@ a, a:visited {
     font-size: 18px;
     padding: 10px;
     display: block;
+    transition: color, 0.1s;
 }
 a:hover {
     background: #2578d9;
@@ -52,13 +53,21 @@ nav {
 nav ul li {
     display: block;
     float: left;
-    width: 33.3333%;
+    width: 20%;
 }
 nav ul li {
     margin: 0 auto;
 }
 nav ul li a {
+    text-decoration: none;
     text-align: center;
+    font-size: 30px;
+}
+nav ul li a span {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 5px;
 }
 
 
@@ -68,7 +77,8 @@ body > footer {
     text-align: center;
 }
 body > footer a {
-    font-size: 12px;
+    text-decoration: none;
+    font-size: 18px;
     display: inline-block;
 }
 
@@ -175,8 +185,8 @@ section.info a {
     a {
         padding: 5px;
     }
-    nav ul li {
-        width: 100%;
+    nav ul li a span {
+        display: none;
     }
     .story {
         text-align: left;
