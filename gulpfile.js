@@ -30,30 +30,30 @@ var gulp = require('gulp'),
             .pipe(connect.reload())
             .pipe(gulp.dest('./dev/templates'));
     });
-    gulp.task('styl.dev', function () {
-        gulp.src('./css/*.styl')
+    gulp.task('styles.dev', function () {
+        gulp.src('./styles/*.styl')
             .pipe(stylus({
                 use: ['nib']
             }))
             .pipe(connect.reload())
-            .pipe(gulp.dest('./dev/css'));
+            .pipe(gulp.dest('./dev/styles'));
     });
     gulp.task('scripts.dev', function() {
-        gulp.src(['./js/**/*.js'])
+        gulp.src(['./src/**/*.coffee'])
+            .pipe(coffee())
             .pipe(connect.reload())
-            .pipe(gulp.dest('./dev/js'));
+            .pipe(gulp.dest('./dev/src'));
     });
 
     gulp.task('watch', ['move'], function () {
         gulp.watch(['./templates/*.tpl'], ['html.dev']);
-        gulp.watch(['./css/**/*.styl'], ['styl.dev']);
-        gulp.watch(['./js/**/*.js'], ['scripts.dev']);
+        gulp.watch(['./styles/**/*.styl'], ['styles.dev']);
+        gulp.watch(['./src/**/*.coffee'], ['scripts.dev']);
     });
 
     var filesToMove = [
-        './css/style.css',
-        './css/fonts/*.*',
-        './js/**',
+        './styles/style.css',
+        './styles/fonts/*.*',
         './stories/**',
         './img/**',
         './index.html'
@@ -64,7 +64,7 @@ var gulp = require('gulp'),
     });
 
     gulp.task('default', function() {
-        gulp.start('styl.dev', 'html.dev', 'move', 'connect', 'watch');
+        gulp.start('scripts.dev', 'styles.dev', 'html.dev', 'move', 'connect', 'watch');
     });
 }()); // dev configuration
 
@@ -76,22 +76,23 @@ var gulp = require('gulp'),
             .pipe(jade())
             .pipe(gulp.dest('./build/templates'));
     });
-    gulp.task('css.build', function () {
-        gulp.src('./css/*.styl')
+    gulp.task('styles.build', function () {
+        gulp.src('./styles/*.styl')
             .pipe(stylus({
                 use: ['nib'],
                 set: ['compress']
             }))
-            .pipe(gulp.dest('./build/css'));
-        gulp.src('./css/style.css')
+            .pipe(gulp.dest('./build/styles'));
+        gulp.src('./styles/style.css')
             .pipe(minifyCSS())
-            .pipe(gulp.dest('./build/css'));
+            .pipe(gulp.dest('./build/styles'));
     });
     gulp.task('scripts.build', function() {
-        gulp.src('./js/**/*.js')
+        gulp.src('./src/**/*.coffee')
+            .pipe(coffee())
             .pipe(uglify())
             .pipe(concat('all.min.js'))
-            .pipe(gulp.dest('./build/js'));
+            .pipe(gulp.dest('./build/src'));
     });
 
     gulp.task('clean.build', function(){
@@ -100,7 +101,7 @@ var gulp = require('gulp'),
     });
     var filesToMove = [
         './stories/*.*',
-        './css/fonts/*.*',
+        './styles/fonts/*.*',
         './img/*.*',
         './index.html'
     ];
@@ -110,6 +111,6 @@ var gulp = require('gulp'),
     });
 
     gulp.task('build', ['clean.build'], function() {
-        gulp.start('html.build', 'css.build', 'scripts.build', 'move.build');
+        gulp.start('html.build', 'styles.build', 'scripts.build', 'move.build');
     });
 }()); // build configuration
