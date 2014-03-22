@@ -11,7 +11,7 @@
         
         render: function() {
             var self = this;
-            this.getTemplate('templates/home.tpl', function(tpl) {
+            this.getTemplate('templates/home.html', function(tpl) {
                 $('#content').html(tpl(self.model.toJSON()));
             });
         }

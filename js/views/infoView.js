@@ -9,7 +9,7 @@
         },
         
         render: function() {
-            this.getTemplate('templates/info.tpl', function(tpl) {
+            this.getTemplate('templates/info.html', function(tpl) {
                 $('#content').html(tpl({
                     prohorovichLink: 'http://www.mathnet.ru/php/person.phtml?option_lang=rus&personid=28439',
                     bookLink: 'https://drive.google.com/file/d/0BwUmPnTc9bQ1M3Q3SElEbHhBN1k/edit?usp=sharing',

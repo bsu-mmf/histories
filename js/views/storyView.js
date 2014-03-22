@@ -16,7 +16,7 @@
         
         render: function() {
             var self = this;
-            this.getTemplate('templates/story.tpl', function(tpl) {
+            this.getTemplate('templates/story.html', function(tpl) {
                 $('#content').html(tpl(self.model.toJSON()));
                 MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
             });
