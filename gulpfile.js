@@ -30,8 +30,11 @@ var gulp = require('gulp'),
             .pipe(connect.reload())
             .pipe(gulp.dest('./dev/templates'));
     });
-    gulp.task('css.dev', function () {
-        gulp.src('./css/*.css')
+    gulp.task('styl.dev', function () {
+        gulp.src('./css/*.styl')
+            .pipe(stylus({
+                use: ['nib']
+            }))
             .pipe(connect.reload())
             .pipe(gulp.dest('./dev/css'));
     });
@@ -43,12 +46,13 @@ var gulp = require('gulp'),
 
     gulp.task('watch', ['move'], function () {
         gulp.watch(['./templates/*.tpl'], ['html.dev']);
-        gulp.watch(['./css/**/*.css'], ['css.dev']);
+        gulp.watch(['./css/**/*.styl'], ['styl.dev']);
         gulp.watch(['./js/**/*.js'], ['scripts.dev']);
     });
 
     var filesToMove = [
-        './css/**',
+        './css/style.css',
+        './css/fonts/*.*',
         './js/**',
         './stories/**',
         './img/**',
@@ -60,7 +64,7 @@ var gulp = require('gulp'),
     });
 
     gulp.task('default', function() {
-        gulp.start('html.dev','move' , 'connect', 'watch');
+        gulp.start('styl.dev', 'html.dev', 'move', 'connect', 'watch');
     });
 }()); // dev configuration
 
@@ -73,7 +77,13 @@ var gulp = require('gulp'),
             .pipe(gulp.dest('./build/templates'));
     });
     gulp.task('css.build', function () {
-        gulp.src('./css/*.css')
+        gulp.src('./css/*.styl')
+            .pipe(stylus({
+                use: ['nib'],
+                set: ['compress']
+            }))
+            .pipe(gulp.dest('./build/css'));
+        gulp.src('./css/style.css')
             .pipe(minifyCSS())
             .pipe(gulp.dest('./build/css'));
     });
