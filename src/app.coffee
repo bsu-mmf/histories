@@ -10,6 +10,8 @@ $(->
 
     $('body').on('click', 'a:not(.normal-link)', (event) ->
         event.preventDefault()
-        router.navigate($(this).data('href'), true)
+        url = $(this).data('href')
+        if not Backbone.history.navigate(url, true)
+            Backbone.history.loadUrl url
     )
  )
