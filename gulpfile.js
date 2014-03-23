@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     coffee = require('gulp-coffee'),
     stylus = require('gulp-stylus'),
-    jade = require('gulp-jade');
+    jade = require('gulp-jade'),
+    useref = require('gulp-useref');
 
 (function() {
     'use strict';
@@ -75,6 +76,10 @@ var gulp = require('gulp'),
         gulp.src('./templates/*.tpl')
             .pipe(jade())
             .pipe(gulp.dest('./build/templates'));
+        gulp.src('./index.html')
+            .pipe(useref())
+            .pipe(minifyHTML())
+            .pipe(gulp.dest('./build'));
     });
     gulp.task('styles.build', function () {
         gulp.src('./styles/*.styl')
@@ -102,8 +107,7 @@ var gulp = require('gulp'),
     var filesToMove = [
         './stories/*.*',
         './styles/fonts/*.*',
-        './img/*.*',
-        './index.html'
+        './img/*.*'
     ];
     gulp.task('move.build', function() {
         gulp.src(filesToMove, { base: './'})

@@ -26,6 +26,7 @@
         "gulp-clean": "~0.2.4",
         "gulp-coffee": "~1.4.1",
         "gulp-stylus": "~0.1.0",
-        "gulp-jade": "~0.4.2"
+        "gulp-jade": "~0.4.2",
+        "gulp-useref": "~0.2.2"
     }
 }
