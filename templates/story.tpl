@@ -6,6 +6,7 @@ div.story
     h1 <%= storyNumber %>.&nbsp;<%= name %>
     div
         <%= content %>
+        <% if (comments) { %>
         div#disqus_thread
         script(type="text/javascript").
             var disqus_shortname = "bsu-mmf-stories",
@@ -16,6 +17,7 @@ div.story
                 dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
                 (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
             })();
+        <% } %>
 
 div.allStories
     ul

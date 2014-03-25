@@ -14,7 +14,7 @@
 
     favorites: ->
         @changeTab('favorites')
-        return
+        new Views.FavoritesView()
 
     random: ->
         @changeTab('randomStory')
@@ -29,7 +29,7 @@
 
     options: ->
         @changeTab('options')
-        return
+        new Views.OptionsView()
 
     info: ->
         @changeTab('info')
