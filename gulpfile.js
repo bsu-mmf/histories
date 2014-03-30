@@ -45,11 +45,17 @@ var gulp = require('gulp'),
             .pipe(connect.reload())
             .pipe(gulp.dest('./dev/src'));
     });
+    gulp.task('stories', function() {
+        gulp.src(['./stories/**'])
+            .pipe(connect.reload())
+            .pipe(gulp.dest('./dev/stories'));
+    });
 
     gulp.task('watch', ['move'], function () {
         gulp.watch(['./templates/*.tpl'], ['html.dev']);
         gulp.watch(['./styles/**/*.styl'], ['styles.dev']);
         gulp.watch(['./src/**/*.coffee'], ['scripts.dev']);
+        gulp.watch(['./stories/**'], ['stories']);
     });
 
     var filesToMove = [
