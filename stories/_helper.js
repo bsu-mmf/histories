@@ -6,5 +6,6 @@ function processText(text) {
         .replace(/ ---/g, '&nbsp;&mdash;')
         .replace(/---/g, '&mdash;')
         .replace(/--/g, '&mdash;')
-        .replace(/ldots/g, '&hellip;');
+        .replace(/ldots/g, '&hellip;')
+        .replace(/\.\.\./g, '&hellip;');
 }
