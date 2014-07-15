@@ -1,0 +1,383 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]),
+[hidden] {
+  display: none;
+}
+.container {
+  max-width: 890px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+a,
+a:visited {
+  color: #2578d9;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  -webkit-transition: color, 0.1s;
+  -moz-transition: color, 0.1s;
+  -o-transition: color, 0.1s;
+  -ms-transition: color, 0.1s;
+  transition: color, 0.1s;
+}
+@media (max-width: 767px) {
+  a,
+  a:visited {
+    padding: 0.2em;
+  }
+}
+a:hover {
+  background-color: #2578d9;
+  color: #ececec;
+}
+a.active {
+  font-weight: bold;
+}
+:focus,
+a:focus {
+  outline: none;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 30px;
+}
+sup {
+  vertical-align: super;
+  font-size: small;
+}
+h1 {
+  font-weight: bold;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  min-width: 320px;
+}
+body {
+  background-color: #ececec;
+  color: #000;
+  font-family: monospace;
+  min-width: 320px;
+}
+body > * {
+  width: 100%;
+}
+body > header {
+  position: fixed;
+  top: 0;
+  min-width: 320px;
+}
+body > header h1 {
+  font-size: 21px;
+  text-align: center;
+  margin-top: 10px;
+}
+body > footer {
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  min-width: 320px;
+}
+body > footer a {
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  body > footer body > footer div:first-child {
+    margin-bottom: 10px;
+  }
+}
+#content {
+  margin-top: 150px;
+  height: calc(100% - 225px);
+  overflow: auto;
+  position: relative;
+}
+@media (max-width: 767px) {
+  #content {
+    margin-top: 120px;
+  }
+}
+nav {
+  margin-top: 20px;
+  text-align: center;
+  border-bottom: 1px solid #2578d9;
+}
+nav ul {
+  vertical-align: bottom;
+  display: inline-block;
+}
+@media (max-width: 410px) {
+  nav ul {
+    width: 100%;
+  }
+}
+nav ul li {
+  border: 1px solid #2578d9;
+  border-bottom: none;
+  margin: 0 0.25em;
+  display: block;
+  float: left;
+  position: relative;
+}
+@media (max-width: 410px) {
+  nav ul li {
+    width: 20%;
+    width: calc(20% - 1px);
+    margin: 0 0 0 -1px;
+  }
+  nav ul li:last-child {
+    border-right: none;
+  }
+}
+nav ul li.tab-current {
+  -webkit-box-shadow: inset 0 3px #2578d9;
+  box-shadow: inset 0 3px #2578d9;
+}
+nav ul li.tab-current:before {
+  content: ' ';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  background-color: #ececec;
+  left: 0;
+}
+nav ul li.tab-current:hover:before {
+  background-color: #2578d9;
+}
+nav ul li a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+  padding: 0.3em 0.7em;
+}
+@media (max-width: 767px) {
+  nav ul li a {
+    padding: 0.2em;
+  }
+}
+nav ul li a span {
+  display: block;
+  font-size: 20px;
+  margin-top: 5px;
+}
+@media (max-width: 767px) {
+  nav ul li a span {
+    display: none;
+  }
+}
+.story {
+  font-size: 17px;
+  text-indent: 40px;
+  text-align: justify;
+  height: calc(100% - 100px);
+  margin-bottom: 30px;
+  padding-right: 15px;
+  overflow: auto;
+}
+@media (max-width: 767px) {
+  .story {
+    text-align: left;
+  }
+}
+.story h1 {
+  margin-bottom: 20px;
+}
+.story p {
+  margin-bottom: 10px;
+}
+.story p.verse {
+  text-indent: 0;
+  padding-left: 40px;
+}
+.story .p {
+  margin-bottom: 20px;
+}
+.story a {
+  display: inline;
+  padding: 0;
+}
+.story .upper {
+  text-transform: uppercase;
+}
+.story .center {
+  text-align: center;
+}
+.story ol {
+  text-indent: 0;
+  padding-left: 75px;
+}
+.story ol.footnote {
+  margin-top: 50px;
+  font-size: small;
+  padding-left: 30px;
+}
+.story ol.footnote:before {
+  border-top: 1px solid #000;
+  content: '';
+  width: 50%;
+  display: block;
+  padding-top: 10px;
+}
+.allStories ul {
+  list-style: none;
+  text-align: center;
+}
+.allStories ul li {
+  display: inline-block;
+}
+.allStories ul li a.current {
+  background-color: #2578d9;
+  color: #ececec;
+}
+.math {
+  text-align: center;
+  text-indent: 0;
+}
+#disqus_thread {
+  text-indent: 0;
+  margin-top: 50px;
+}
+section.info h1 {
+  font-size: 20px;
+  margin: 40px 0 20px;
+}
+section.info h1:first-child {
+  margin-top: 0;
+}
+section.info p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-indent: 40px;
+  text-align: justify;
+}
+section.info a {
+  display: inline;
+  padding: 0;
+}
+section.options {
+  font-size: 17px;
+}
