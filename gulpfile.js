@@ -4,51 +4,50 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     minifyHTML = require('gulp-minify-html'),
     uglify = require('gulp-uglify'),
-    connect = require('gulp-connect'),
+    browserSync = require('browser-sync'),
     clean = require('gulp-clean'),
     coffee = require('gulp-coffee'),
     stylus = require('gulp-stylus'),
     jade = require('gulp-jade'),
-    useref = require('gulp-useref');
+    useref = require('gulp-useref'),
+    nib = require('nib'),
+    reload = browserSync.reload;
 
 (function() {
     'use strict';
-    
-    gulp.task('connect', connect.server({
-        root: ['dev'],
-        port: 1337,
-        livereload: true,
-        open: {
-            browser: 'chrome'
-        }
-    }));
 
     gulp.task('html.dev', function () {
         gulp.src('./templates/*.tpl')
             .pipe(jade({
                 pretty: true
             }))
-            .pipe(connect.reload())
-            .pipe(gulp.dest('./dev/templates'));
+            .pipe(gulp.dest('./dev/templates'))
+            .pipe(reload({stream: true, once: true}));
+        gulp.src('index.html')
+            .pipe(gulp.dest('./dev'))
+            .pipe(reload({stream: true, once: true}));
     });
     gulp.task('styles.dev', function () {
         gulp.src('./styles/*.styl')
             .pipe(stylus({
-                use: ['nib']
+                use: [ nib() ]
             }))
-            .pipe(connect.reload())
-            .pipe(gulp.dest('./dev/styles'));
+            .pipe(gulp.dest('./dev/styles'))
+            .pipe(reload({stream: true}));
+        gulp.src('./styles/*.css')
+            .pipe(gulp.dest('./dev/styles'))
+            .pipe(reload({stream: true}));
     });
     gulp.task('scripts.dev', function() {
         gulp.src(['./src/**/*.coffee'])
             .pipe(coffee())
-            .pipe(connect.reload())
-            .pipe(gulp.dest('./dev/src'));
+            .pipe(gulp.dest('./dev/src'))
+            .pipe(reload({stream: true, once: true}));
     });
     gulp.task('stories', function() {
         gulp.src(['./stories/**'])
-            .pipe(connect.reload())
-            .pipe(gulp.dest('./dev/stories'));
+            .pipe(gulp.dest('./dev/stories'))
+            .pipe(reload({stream: true, once: true}));
     });
 
     gulp.task('watch', ['move'], function () {
@@ -57,12 +56,20 @@ var gulp = require('gulp'),
         gulp.watch(['./src/**/*.coffee'], ['scripts.dev']);
         gulp.watch(['./stories/**'], ['stories']);
     });
+    
+    gulp.task('browser-sync', function() {
+        browserSync({
+            server: {
+                baseDir: "./dev"
+            }
+        });
+    });
 
     var filesToMove = [
-        './styles/style.css',
         './styles/fonts/*.*',
         './stories/**',
         './img/**',
+        './libs/**',
         './index.html'
     ];
     gulp.task('move', function() {
@@ -71,7 +78,7 @@ var gulp = require('gulp'),
     });
 
     gulp.task('default', function() {
-        gulp.start('scripts.dev', 'styles.dev', 'html.dev', 'move', 'connect', 'watch');
+        gulp.start('scripts.dev', 'styles.dev', 'html.dev', 'move', 'browser-sync', 'watch');
     });
 }()); // dev configuration
 
@@ -90,11 +97,11 @@ var gulp = require('gulp'),
     gulp.task('styles.build', function () {
         gulp.src('./styles/*.styl')
             .pipe(stylus({
-                use: ['nib'],
+                use: [ nib() ],
                 set: ['compress']
             }))
             .pipe(gulp.dest('./build/styles'));
-        gulp.src('./styles/style.css')
+        gulp.src('./styles/*.css')
             .pipe(minifyCSS())
             .pipe(gulp.dest('./build/styles'));
     });
@@ -113,7 +120,8 @@ var gulp = require('gulp'),
     var filesToMove = [
         './stories/*.*',
         './styles/fonts/*.*',
-        './img/*.*'
+        './img/*.*',
+        './libs/**'
     ];
     gulp.task('move.build', function() {
         gulp.src(filesToMove, { base: './'})

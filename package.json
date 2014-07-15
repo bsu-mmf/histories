@@ -17,16 +17,18 @@
     },
     "homepage": "https://github.com/bsu-mmf/histories",
     "devDependencies": {
-        "gulp": "~3.5.6",
-        "gulp-uglify": "~0.2.1",
-        "gulp-concat": "~2.2.0",
-        "gulp-connect": "~1.0.9",
-        "gulp-minify-css": "~0.3.0",
-        "gulp-minify-html": "~0.1.2",
-        "gulp-clean": "~0.2.4",
-        "gulp-coffee": "~1.4.1",
-        "gulp-stylus": "~0.1.0",
-        "gulp-jade": "~0.4.2",
-        "gulp-useref": "~0.2.2"
+        "gulp": "^3.8.6",
+        "browser-sync": "^1.2.1",
+        
+        "gulp-uglify": "^0.3.1",
+        "gulp-concat": "^2.3.3",
+        "gulp-minify-css": "^0.3.6",
+        "gulp-minify-html": "^0.1.4",
+        "gulp-clean": "^0.3.1",
+        "gulp-coffee": "^2.1.1",
+        "gulp-stylus": "^1.0.5",
+        "nib": "^1.0.3",
+        "gulp-jade": "^0.6.1",
+        "gulp-useref": "^0.5.0"
     }
 }

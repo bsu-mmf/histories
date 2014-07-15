@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 @Models = @Models || {}
 Models.HomeModel = Backbone.Model.extend({
     defaults:
