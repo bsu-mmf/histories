@@ -9,7 +9,7 @@ Views.InfoView = Backbone.View.extend({
         this.getTemplate('templates/info.html', (tpl) ->
             $('#content').html tpl({
                 prohorovichLink: 'http://www.mathnet.ru/php/person.phtml?option_lang=rus&personid=28439',
-                bookLink: 'https://drive.google.com/file/d/0BwUmPnTc9bQ1M3Q3SElEbHhBN1k/edit?usp=sharing',
+                bookLink: 'https://drive.google.com/file/d/0BwUmPnTc9bQ1UE9Ob3BsRXBvb0U/view?usp=sharing',
                 semigradskyLink: 'http://brainstorage.me/semigradsky',
                 vkJokesLink: 'http://vk.com/bsu_mmf_jokes',
                 vkSemigradskyLink: 'http://vk.com/semigradsky',
