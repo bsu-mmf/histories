@@ -1,7 +1,7 @@
 'use strict'
 
 @Settings =
-    Version: '0.0.5'
+    Version: '0.0.6'
     CountStories: 54
     ApplyTheme: ->
         if localStorage.getItem('theme') == null
